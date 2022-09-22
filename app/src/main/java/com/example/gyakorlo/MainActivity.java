@@ -3,6 +3,7 @@ package com.example.gyakorlo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -62,6 +63,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 megjelenit.setText(text.toLowerCase());
+            }
+        });
+
+        veletlenSzin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                red = (int)(Math.random() * 256) + 0;
+                green = (int)(Math.random() * 256) + 0;
+                blue = (int)(Math.random() * 256) + 0;
+                megjelenit.setBackgroundColor(Color.rgb(red, green, blue));
             }
         });
     }
