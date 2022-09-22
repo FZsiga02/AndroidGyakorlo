@@ -57,5 +57,12 @@ public class MainActivity extends AppCompatActivity {
                 megjelenit.setText(text.toUpperCase());
             }
         });
+
+        kisBetu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                megjelenit.setText(text.toLowerCase());
+            }
+        });
     }
 }
